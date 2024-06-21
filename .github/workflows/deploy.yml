@@ -37,6 +37,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           sudo docker pull nagenderkalakuntla/ci-cd:latest
-          sudo docker stop web-app || true
-          sudo docker rm web-app || true
-          sudo docker run -d --name web-app -p 3005:3000 nagenderkalakuntla/ci-cd:latest
+          sudo docker stop ci-cd || true
+          sudo docker rm ci-cd || true
+          sudo docker run -d --name ci-cd -p 3005:3000 nagenderkalakuntla/ci-cd:latest
